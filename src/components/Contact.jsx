@@ -2,9 +2,9 @@ import React from 'react';
 
 const Contact = () => {
   const footerLinks = [
-    { name: 'GitHub', url: 'https://github.com/theravijadav' },
+    { name: 'GitHub', url: 'https://github.com/ravijadav-dev' },
     { name: 'Twitter', url: '' }, // Leave empty to hide
-    { name: 'Resume', url: '/portfolio/Ravi%20Jadav%20-%20Resume.pdf' }
+    { name: 'Resume', url: '/ravijadav-dev.github.io/Ravi%20Jadav%20-%20Resume.pdf' }
   ];
 
   return (
