@@ -1,14 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  :root, :root[data-theme="vscode"] {
+    --color-darker: 5 5 5;
+    --color-dark: 10 10 11;
+    --color-primary: 59 130 246;
+    --color-secondary: 139 92 246;
+    --color-accent: 16 185 129;
+    --color-light: 243 244 246;
+    --color-muted: 156 163 175;
+  }
+
+  :root[data-theme="dracula"] {
+    --color-darker: 40 42 54;
+    --color-dark: 68 71 90;
+    --color-primary: 255 121 198;
+    --color-secondary: 189 147 249;
+    --color-accent: 80 250 123;
+    --color-light: 248 248 242;
+    --color-muted: 98 114 164;
+  }
+
+  :root[data-theme="nord"] {
+    --color-darker: 46 52 64;
+    --color-dark: 59 66 82;
+    --color-primary: 136 192 208;
+    --color-secondary: 180 142 173;
+    --color-accent: 163 190 140;
+    --color-light: 236 239 244;
+    --color-muted: 216 222 233;
+  }
+
   body {
-    @apply bg-darker text-light font-sans antialiased selection:bg-primary/30 selection:text-primary;
+    @apply bg-darker text-light font-sans antialiased selection:bg-primary/30 selection:text-primary transition-colors duration-500 ease-in-out;
     margin: 0;
     overflow-x: hidden;
+  }
+
+  * {
+    @apply transition-colors duration-300;
   }
 }
 
